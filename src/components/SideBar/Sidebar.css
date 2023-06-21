@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@200;300;400;500;600;800&display=swap');
+
+/* styles.css */
+.ham {
+  display: flex;
+}
+
+.header {
+  background-color: #1f1e1e;
+  border: none;
+  /* padding: 10px; */
+}
+
+.hamburger {
+  color: rgb(235, 208, 8);
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  margin: 1rem;
+  left: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #004526;;
+  transition: left 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.sidebar.open {
+  left: 0;
+  z-index: 2;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.close-button {
+  color: rgb(235, 208, 8);
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  margin: 1rem;
+  left: 0;
+  z-index: 10;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 20px 20px;
+  margin-top: 100px;
+}
+
+.menu-items li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 2px solid white;
+  font-family: 'DM Serif Display', serif;
+/* font-family: 'Poppins', sans-serif; */
+}
+
+.menu-items li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.menu-items li a:hover {
+  color: #ffcc00;
+  /* border-left: 2px dotted #ffcc00; */
+  /* transition: ease-in-out; */
+  transition: color 0.3s ease-in-out;
+  animation: animatedborder 1s ease-in-out;
+}
+
+/* .content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+  } */
+
+/* Add any additional styles as needed */
+@keyframes animatedborder {
+  0% {
+    padding: 5px;
+    letter-spacing: 0.5px;
+    /* border-left: 2px dotted yellow; */
+  }
+  
+  25% {
+    padding: 10px;
+    letter-spacing: 1px;
+    /* border-top: 2px dotted yellow; */
+  }
+  
+  50% {
+    padding: 15px;
+    letter-spacing: 1.5px;
+    /* border-right: 2px dotted yellow; */
+  }
+  
+  100% {
+    padding: 20px;
+    letter-spacing: 2px;
+    /* border-bottom: 2px dotted yellow; */
+  }
+}
